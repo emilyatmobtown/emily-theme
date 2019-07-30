@@ -1,1 +1,18 @@
 /* Layout */
+
+.site-wrapper {
+    width: 34rem;
+    max-width: 92%;
+    margin: 0 auto;
+}
+
+.footer-main .site-wrapper {
+    border-top: 0.25rem solid var(--c-white);
+    padding-top: 2rem;
+}
+
+@media (--bp-small) {
+    .home #content {
+        margin-top: 10rem;
+    }
+}
