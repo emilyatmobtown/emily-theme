@@ -1,0 +1,17 @@
+{
+  "name": "emily-theme",
+  "exclude": [
+    "node_modules"
+  ],
+  "tests": [
+      "./tests/wpa/*.php"
+  ],
+  "enforce_clean_db": false,
+  "project_path": "%WP_ROOT%/wp-content/themes/emily-theme",
+  "environment_instructions": [
+    [
+      "install wordpress where url is http://emily-theme.test",
+      "enable theme where name is emily-theme"
+    ]
+  ]
+}
