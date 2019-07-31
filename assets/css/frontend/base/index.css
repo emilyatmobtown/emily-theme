@@ -110,7 +110,6 @@ a:hover {
 .hello:hover {
     color: var(--c-bright-sun);
     letter-spacing: 0.25em;
-    font-weight: 900;
     text-decoration: none;
 }
 
@@ -166,14 +165,4 @@ a:hover {
     animation-name: bounce, grow;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-}
-
-.hello:hover .l-1::after {
-    animation-duration: 0.25s;
-    animation-delay: 0.125s;
-}
-
-.hello:hover .l-2::after {
-    animation-duration: 0.25s;
-    animation-delay: 0.25s;
 }
