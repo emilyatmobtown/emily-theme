@@ -4,6 +4,7 @@
 	--c-white: #fff;
 	--c-cardinal: #c80b2d;
 	--c-valentino: #2b0d41;
+	--c-bright-sun: #ffd734;
 
 	/* Breakpoints */
 	@custom-media --bp-tiny ( min-width: 25em ); /* 400px */

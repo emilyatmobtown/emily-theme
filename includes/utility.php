@@ -61,3 +61,27 @@ function adjust_brightness( $hex, $steps ) {
 	return $return;
 
 }
+
+/**
+ * Filter the page title to add HTML tags to the home page title.
+ *
+ * @param string $title The title of the page
+ * @param number $id The post ID of the page
+ * @return string The filtered title
+ */
+function add_html_to_home_title( $title, $id = null ) {
+	if ( is_home( $id ) || is_front_page( $id ) ) {
+		$hello_string =
+			'<a class="hello" href="https://twitter.com/emilyatmobtown" target="_blank"><span class="letter h">H
+				</span><span class="letter e">e
+				</span><span class="letter l-1">l
+				</span><span class="letter l-2">l
+				</span><span class="letter o">o
+			</span></a>';
+
+		$title = str_replace( "Hello", $hello_string, $title );
+	}
+
+	return $title;
+}
+add_filter( 'the_title', 'EmilyTheme\Utility\add_html_to_home_title', 10, 2 );

@@ -14,28 +14,46 @@
 }
 
 h2 {
-    font-family: Lobster, Arial, sans-serif;
-    font-size: 3rem;
+    font-family: Lobster, Arial, cursive;
+    font-size: 2rem;
     line-height: 1.125em;
     font-weight: 400;
     color: var(--c-white);
     margin-bottom: 0.75em;
 }
 
-footer, p {
+footer,
+p {
     font-family: Merriweather, "Times New Roman", serif;
     color: var(--c-white);
-    font-size: 1.75rem;
-    line-height: 1.5em;
-    margin: 0 0 1.25em 0;
+    font-size: 1.25rem;
+    line-height: 1.65em;
+    margin: 0 0 1.4em 0;
+}
+
+@media (--bp-small) {
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    footer,
+    p {
+        font-size: 1.75rem;
+        line-height: 1.75em;
+    }
 }
 
 a {
     color: inherit;
+}
+
+a:hover {
     text-decoration: none;
 }
 
 .link-contact {
+    text-decoration: none;
     margin-right: 0.25rem;
     position: relative;
     display: inline-block;
@@ -82,4 +100,90 @@ a {
     filter: opacity(0.15);
     width: 100%;
     height: auto;
+}
+
+.hello {
+    letter-spacing: normal;
+    transition: all 0.2s ease-out;
+}
+
+.hello:hover {
+    color: var(--c-bright-sun);
+    letter-spacing: 0.25em;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.letter {
+    display: inline-block;
+    position: relative;
+}
+
+@keyframes bounce {
+
+    from {
+        top: 50%;
+        left: 50%;
+    }
+
+    to {
+        top: -20%;
+        left: 40%;
+    }
+}
+
+@keyframes grow {
+
+    from {
+        width: 0;
+        height: 0;
+    }
+
+    to {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.letter::after {
+    content: '';
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: var(--z-minus-50);
+    transform: translate(-50%, -50%);
+}
+
+.hello:hover .letter::after {
+    animation-name: bounce, grow;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.hello:hover .h::after {
+    animation-duration: 0.5s;
+}
+
+.hello:hover .e::after {
+    animation-duration: 0.25s;
+    animation-delay: 0.125s;
+}
+
+.hello:hover .l-1::after {
+    animation-duration: 0.75s;
+    animation-delay: 0.25s;
+}
+
+.hello:hover .l-2::after {
+    animation-duration: 0.25s;
+    animation-delay: 0.5s;
+}
+
+.hello:hover .o::after {
+    animation-duration: 0.5s;
+    animation-delay: 0.75s;
 }
