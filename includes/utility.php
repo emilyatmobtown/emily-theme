@@ -79,7 +79,7 @@ function add_html_to_home_title( $title, $id = null ) {
 				</span><span class="letter o">o
 			</span></a>';
 
-		$title = str_replace( "Hello", $hello_string, $title );
+		$title = str_replace( 'Hello', $hello_string, $title );
 	}
 
 	return $title;

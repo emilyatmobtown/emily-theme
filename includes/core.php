@@ -71,6 +71,14 @@ function theme_setup() {
 function scripts() {
 
 	wp_enqueue_script(
+		'fontawesome',
+		'//kit.fontawesome.com/9be3d3e084.js',
+		[],
+		EMILY_THEME_VERSION,
+		true
+	);
+
+	wp_enqueue_script(
 		'frontend',
 		EMILY_THEME_TEMPLATE_URL . '/dist/js/frontend.js',
 		[],
@@ -96,6 +104,13 @@ function scripts() {
  * @return void
  */
 function styles() {
+
+	wp_enqueue_style(
+		'google-fonts',
+		'//fonts.googleapis.com/css?family=Lobster|Merriweather&display=swap',
+		[],
+		EMILY_THEME_VERSION
+	);
 
 	wp_enqueue_style(
 		'styles',

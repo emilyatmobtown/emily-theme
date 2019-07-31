@@ -11,8 +11,6 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#d23226" />
-		<link href="https://fonts.googleapis.com/css?family=Lobster|Merriweather&display=swap" rel="stylesheet">
-		<script src="https://kit.fontawesome.com/9be3d3e084.js"></script>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
