@@ -114,6 +114,10 @@ a:hover {
     text-decoration: none;
 }
 
+.hello:hover::after {
+    content: 'oooo';
+}
+
 .letter {
     display: inline-block;
     position: relative;
@@ -164,26 +168,12 @@ a:hover {
     animation-iteration-count: infinite;
 }
 
-.hello:hover .h::after {
-    animation-duration: 0.5s;
-}
-
-.hello:hover .e::after {
+.hello:hover .l-1::after {
     animation-duration: 0.25s;
     animation-delay: 0.125s;
 }
 
-.hello:hover .l-1::after {
-    animation-duration: 0.75s;
-    animation-delay: 0.25s;
-}
-
 .hello:hover .l-2::after {
     animation-duration: 0.25s;
-    animation-delay: 0.5s;
-}
-
-.hello:hover .o::after {
-    animation-duration: 0.5s;
-    animation-delay: 0.75s;
+    animation-delay: 0.25s;
 }
